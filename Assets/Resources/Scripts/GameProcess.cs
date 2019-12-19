@@ -23,6 +23,7 @@ public class GameProcess : MonoBehaviour
     private void Start()
     {
         //test changes
+        //test test
         Time.timeScale = 2f;
         StartCoroutine(StartGame());
     }
