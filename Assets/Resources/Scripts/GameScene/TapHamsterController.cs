@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TapController : MonoBehaviour
+public class TapHamsterController : MonoBehaviour
 {
     public bool IsPaused { get; set; }
 

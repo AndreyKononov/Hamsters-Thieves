@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MenuPause : MonoBehaviour
 {
-    [SerializeField] private TapController tapController;
+    [SerializeField] private TapHamsterController tapController;
     [SerializeField] private GameObject pausedMenu;
 
     public void Pause()

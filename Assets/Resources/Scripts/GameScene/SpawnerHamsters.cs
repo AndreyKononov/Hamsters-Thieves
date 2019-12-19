@@ -16,8 +16,12 @@ public class SpawnerHamsters : MonoBehaviour
 
     private Coroutine coroutineSwapner;
 
+    private ComplexityGame complexityGame;
+
     private void Awake()
     {
+        complexityGame = new ComplexityGame();
+
         listHamsters = new List<GameObject>();
 
         poolHamsters = GetComponent<PoolHamsters>();
@@ -56,7 +60,9 @@ public class SpawnerHamsters : MonoBehaviour
 
     private void SpawnHamsters()
     {
-        for (int i = 0; i <= Random.Range (0,3); i++)
+        complexityGame.ChangeComplexity(levelInfo.Score);
+
+        for (int i = 0; i <= Random.Range (0,complexityGame.MaxCounHamster); i++)
         {
             GameObject goHamster = poolHamsters.GetHamster();
             goHamster.transform.position = poolPosition.GetUnit();
@@ -68,7 +74,6 @@ public class SpawnerHamsters : MonoBehaviour
 
     public void DropInPool()
     {
-        //Когда отправлять в пул? Когда заверишлась анимация исчезновения.
         for (int i = 0; i < listHamsters.Count; i++)
         {
             poolHamsters.DropUnit(listHamsters[i]);
@@ -82,7 +87,7 @@ public class SpawnerHamsters : MonoBehaviour
     {
         foreach (var hamster in listHamsters)
         {
-            hamster?.GetComponent<Hamster>().DestroyHamster();
+            hamster?.GetComponent<Hamster>()?.DestroyHamster();
         }
 
         DropInPool();

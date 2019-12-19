@@ -22,9 +22,6 @@ public class GameProcess : MonoBehaviour
 
     private void Start()
     {
-        //test changes
-        //test test
-        Time.timeScale = 2f;
         StartCoroutine(StartGame());
     }
 
@@ -37,14 +34,13 @@ public class GameProcess : MonoBehaviour
         spawnerHamsters.StartGame();
     }
 
-    public void GameOver(int score)
+    public void GameOver( int score )
     {
         gameOverScreen.SetActive(true);
         txtScore.text = score.ToString();
-        
+
         spawnerHamsters.StopGame();
         Time.timeScale = 0;
-        //DestroyAllHamsters();
     }
 
     public void RestartGame()
@@ -55,16 +51,4 @@ public class GameProcess : MonoBehaviour
         gameOverScreen.SetActive(false);
         Time.timeScale = 2f;
     }
-
-    //private void DestroyAllHamsters()
-    //{
-    //    for (int i = 0; i < spawnerHamsters.listHamsters.Count; i++)
-    //    {
-    //        poolHamsters.DropUnit(spawnerHamsters.listHamsters[i]);
-    //        poolPositions.DropUnit(spawnerHamsters.listHamsters[i].transform.position);
-    //    }
-
-    //    spawnerHamsters.listHamsters.Clear();
-
-    //}
 }

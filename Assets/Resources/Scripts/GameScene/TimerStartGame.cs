@@ -28,6 +28,8 @@ public class TimerStartGame : MonoBehaviour
 
     public IEnumerator CoroutineStartTimer()
     {
+        Time.timeScale = 1;
+
         txtTimer.text = "";
 
         int countSecond = 3;

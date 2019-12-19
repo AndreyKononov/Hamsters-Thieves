@@ -10,6 +10,8 @@ public class LevelInfo : MonoBehaviour
     [SerializeField] private Text txtHealth;
     [SerializeField] private Text txtScore;
 
+    private RecordScore recordScore = new RecordScore();
+
     private int healthPoints;
     private int HealthPoints
     {
@@ -51,7 +53,8 @@ public class LevelInfo : MonoBehaviour
 
         if (HealthPoints == 0)
         {
-            gameProcess.GameOver(Score);
+            recordScore.SaveScore(Score);
+            gameProcess.GameOver(Score);   
         }
 
         txtHealth.text = HealthPoints.ToString();

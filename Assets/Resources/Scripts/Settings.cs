@@ -41,11 +41,6 @@ public class Settings : MonoBehaviour
         ChangeIconSound();
     }
 
-    public void StartGame()
-    {
-        SceneManager.LoadScene(1);
-    }
-
     public void ClickButton()
     {
         audioSourceSound.Play();
