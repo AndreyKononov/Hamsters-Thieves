@@ -24,6 +24,8 @@ public class GameProcess : MonoBehaviour
     {
         //test changes
         //test test
+        //bla bla bla
+
         Time.timeScale = 2f;
         StartCoroutine(StartGame());
     }
