@@ -49,6 +49,13 @@ public class GameProcess : MonoBehaviour
 
         levelInfo.SetStartInfo();
         gameOverScreen.SetActive(false);
-        Time.timeScale = 2f;
+    }
+
+    public void ContinueGameAD()
+    {
+        StartCoroutine(StartGame());
+
+        levelInfo.SetStartInfoADS();
+        gameOverScreen.SetActive(false);
     }
 }

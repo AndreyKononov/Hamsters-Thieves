@@ -6,17 +6,17 @@ public class PoolPositions : MonoBehaviour
 {
     private List<Vector3> dotsSpawnes = new List<Vector3>(9)
     {
-        new Vector3(-1.75f,-2.3f,0),
-        new Vector3(0,-2.3f,0),
-        new Vector3(1.75f,-2.3f,0),
+        new Vector3(-1.75f,-1.8f, 0),
+        new Vector3(0,-1.8f, 0),
+        new Vector3(1.75f, -1.8f, 0),
 
-        new Vector3(-1.75f,-0.3f,0),
-        new Vector3(0,-0.3f,0),
-        new Vector3(1.75f,-0.3f,0),
+        new Vector3(-1.75f, 0.2f, 0),
+        new Vector3(0, 0.2f, 0),
+        new Vector3(1.75f, 0.2f, 0),
 
-        new Vector3(-1.75f,1.7f,0),
-        new Vector3(0,1.7f,0),
-        new Vector3(1.75f,1.7f,0)
+        new Vector3(-1.75f, 2.2f, 0),
+        new Vector3(0, 2.2f, 0),
+        new Vector3(1.75f, 2.2f, 0)
     };
 
     public Vector3 GetUnit()

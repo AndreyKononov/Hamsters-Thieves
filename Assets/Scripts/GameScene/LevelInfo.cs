@@ -41,6 +41,13 @@ public class LevelInfo : MonoBehaviour
         txtScore.text = Score.ToString();
     }
 
+    public void SetStartInfoADS()
+    {
+        HealthPoints = 50;
+
+        txtHealth.text = HealthPoints.ToString();
+    }
+
     private void ChangeHealthPoints(int healthHamster)
     {
         if (HealthPoints == 100)
