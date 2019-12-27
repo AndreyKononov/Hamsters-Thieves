@@ -43,7 +43,8 @@ public class Settings : MonoBehaviour
 
     public void ClickButton()
     {
-        audioSourceSound.Play();
+        if (audioSourceSound.enabled)
+            audioSourceSound.Play();
     }
 
     public void OpenSetting()

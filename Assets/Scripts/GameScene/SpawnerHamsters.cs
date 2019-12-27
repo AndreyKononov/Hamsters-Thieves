@@ -51,7 +51,7 @@ public class SpawnerHamsters : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(0.5f);
             SpawnHamsters();         
             yield return new WaitForSeconds(lifeTime);
             DropInPool();

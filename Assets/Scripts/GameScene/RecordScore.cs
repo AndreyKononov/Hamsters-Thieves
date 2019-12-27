@@ -8,7 +8,8 @@ public class RecordScore
 
     public void SaveScore(int score)
     {
-        PlayerPrefs.SetInt(hamsterScore, score);
+        if (GetScore() < score)
+            PlayerPrefs.SetInt(hamsterScore, score);
     }
 
     public int GetScore()

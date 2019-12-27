@@ -6,7 +6,7 @@ public class SelectHamster : MonoBehaviour
 {
     public void RandHamster(GameObject goHamster)
     {
-        int randHamster = Random.Range(5, 5);
+        int randHamster = Random.Range(0, 6);
 
         switch (randHamster)
         {
